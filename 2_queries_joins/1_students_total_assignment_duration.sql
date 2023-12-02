@@ -1,3 +1,4 @@
-SELECT students.name as student_name, duration 
-FROM students INNER JOIN assignment_submissions ON id = id
+SELECT SUM(asssignement_submissions.duration) as total_duration
+FROM assignment_submissions
+JOIN students ON students.id = student_id
 WHERE student_name LIKE '%Ibrahim Schimmel%';
