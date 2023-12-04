@@ -13,6 +13,7 @@ CREATE TABLE assistance_requests (
   teacher_id INTEGER REFERENCES teachers(id) ON DELETE CASCADE,
   created_at TIMESTAMP, -- DT LRG VS TIMESTAMP SMALLER RANGE OF TIME IN SEC
   started_at TIMESTAMP,
+  completed_at TIMESTAMP,
   student_feedback TEXT,
   teacher_feedback TEXT
 );
